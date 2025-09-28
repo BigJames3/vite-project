@@ -12,6 +12,7 @@ function App() {
     <h1 className={x}>{x}Hello World *-</h1>
     <p> It has {x} horsepower</p>
     <p className="myclass">Hello Word!</p>
+    <p className="myclass">Hello Word!</p>
     <h1>Bon jour</h1>
     <p> It has {2000/5} horsepower</p>
     <p> It has {hp} horsepower</p>
