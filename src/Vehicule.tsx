@@ -1,9 +1,6 @@
-import React from 'react';
 
-class Carss extends React.Component {
-  render() {
-    return <h2>Hi, I am a Car!</h2>;
-  }
+function Cards({color}) {
+  return (
+    <h2>My car is {color}!</h2>
+  );
 }
-
-export default Carss;
