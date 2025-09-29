@@ -28,24 +28,23 @@ Ensuite ouvre http://localhost:5173 dans ton navigateur.
 
 #### 🛠️ Scripts utiles
 
-npm run dev → démarre le serveur de dev avec HMR
+```bash
+ npm run dev → démarre le serveur de dev avec HMR
 
-npm run build → génère la version de production dans le dossier dist/
+ npm run build → génère la version de production dans le dossier dist/
 
 npm run preview → lance un serveur local pour tester la version buildée
 
 npm run lint → exécute ESLint pour analyser ton code
-
+```
 
 ##### ⚡ Plugins officiels disponibles
 
 Deux plugins React peuvent être utilisés avec Vite :
 
-@vitejs/plugin-react
- → utilise Babel pour le Fast Refresh
+- @vitejs/plugin-react → utilise Babel pour le Fast Refresh
 
-@vitejs/plugin-react-swc
- → utilise SWC (plus rapide)
+- @vitejs/plugin-react-swc → utilise SWC (plus rapide)
 
 
 ###### 🔍 ESLint et règles TypeScript
@@ -80,9 +79,11 @@ export default defineConfig([
 
 Tu peux aussi installer :
 
+```bash
 eslint-plugin-react-x
 
 eslint-plugin-react-dom
+```
 
 Puis les activer dans eslint.config.js :
 
@@ -109,6 +110,7 @@ export default defineConfig([
 ```
 
 ######## 📂 Structure du projet
+```bash
 vite-project/
 ├── public/              # Fichiers statiques
 ├── src/                 # Code source
@@ -117,14 +119,15 @@ vite-project/
 │   └── ...              # Autres composants
 ├── tsconfig.json        # Config TypeScript
 ├── vite.config.ts       # Config Vite
-└── package.json
+└── package.json         # Dépendances et scripts
+```
 
 ######### 🚀 Objectifs d’apprentissage
 
 Comprendre la structure d’un projet React + TypeScript + Vite
 
-Savoir utiliser HMR pour développer plus rapidement
+- Savoir utiliser HMR pour développer plus rapidement
 
-Configurer et appliquer des règles ESLint adaptées
+- Configurer et appliquer des règles ESLint adaptées
 
-Apprendre à écrire des composants React avec TypeScript
+- Apprendre à écrire des composants React avec TypeScript
