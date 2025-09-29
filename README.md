@@ -1,4 +1,4 @@
-📘 README.md
+
 # React + TypeScript + Vite
 
 Ce projet est une base minimale pour apprendre à utiliser **React** avec **TypeScript** et **Vite** 🚀.  
@@ -16,7 +16,7 @@ cd ton-projet
 npm install
 ```
 
-### ▶️ Lancer le projet
+## ▶️ Lancer le projet
 
 Pour démarrer le serveur de développement :
 
@@ -26,7 +26,7 @@ npm run dev
 
 Ensuite ouvre http://localhost:5173 dans ton navigateur.
 
-#### 🛠️ Scripts utiles
+## 🛠️ Scripts utiles
 
 ```bash
  npm run dev → démarre le serveur de dev avec HMR
@@ -38,7 +38,7 @@ npm run preview → lance un serveur local pour tester la version buildée
 npm run lint → exécute ESLint pour analyser ton code
 ```
 
-##### ⚡ Plugins officiels disponibles
+## ⚡ Plugins officiels disponibles
 
 Deux plugins React peuvent être utilisés avec Vite :
 
@@ -47,7 +47,7 @@ Deux plugins React peuvent être utilisés avec Vite :
 - @vitejs/plugin-react-swc → utilise SWC (plus rapide)
 
 
-###### 🔍 ESLint et règles TypeScript
+## 🔍 ESLint et règles TypeScript
 
 Si tu développes une application destinée à la production, il est recommandé d’activer des règles ESLint plus strictes.
 Par exemple, dans eslint.config.js :
@@ -75,7 +75,7 @@ export default defineConfig([
 ])
 ```
 
-####### 🎨 Plugins ESLint supplémentaires pour React
+## 🎨 Plugins ESLint supplémentaires pour React
 
 Tu peux aussi installer :
 
@@ -109,7 +109,7 @@ export default defineConfig([
 ])
 ```
 
-######## 📂 Structure du projet
+## 📂 Structure du projet
 ```bash
 vite-project/
 ├── public/              # Fichiers statiques
@@ -122,7 +122,7 @@ vite-project/
 └── package.json         # Dépendances et scripts
 ```
 
-######### 🚀 Objectifs d’apprentissage
+## 🚀 Objectifs d’apprentissage
 
 Comprendre la structure d’un projet React + TypeScript + Vite
 
