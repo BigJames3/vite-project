@@ -65,6 +65,11 @@ function App() {
 const bus = ['Volvo', 'BMW', 'Ford', 'Mazda'];
   return (
     <> 
+    <form action="">
+      <label htmlFor=""> Enter your name : 
+        <input type="text" />
+      </label>
+    </form>
     <ul>
       {bus.map((buss, index) => <li key={index}>{buss}</li> )}
     </ul>
