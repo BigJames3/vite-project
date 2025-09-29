@@ -19,9 +19,11 @@ npm install
 ### ▶️ Lancer le projet
 
 Pour démarrer le serveur de développement :
+
 ```bash
 npm run dev
 ```
+
 Ensuite ouvre http://localhost:5173 dans ton navigateur.
 
 #### 🛠️ Scripts utiles
@@ -35,7 +37,7 @@ npm run preview → lance un serveur local pour tester la version buildée
 npm run lint → exécute ESLint pour analyser ton code
 
 
-#####⚡ Plugins officiels disponibles
+##### ⚡ Plugins officiels disponibles
 
 Deux plugins React peuvent être utilisés avec Vite :
 
@@ -46,10 +48,11 @@ Deux plugins React peuvent être utilisés avec Vite :
  → utilise SWC (plus rapide)
 
 
-######🔍 ESLint et règles TypeScript
+###### 🔍 ESLint et règles TypeScript
 
 Si tu développes une application destinée à la production, il est recommandé d’activer des règles ESLint plus strictes.
 Par exemple, dans eslint.config.js :
+
 ```js
 export default defineConfig([
   globalIgnores(['dist']),
@@ -73,7 +76,7 @@ export default defineConfig([
 ])
 ```
 
-#######🎨 Plugins ESLint supplémentaires pour React
+####### 🎨 Plugins ESLint supplémentaires pour React
 
 Tu peux aussi installer :
 
@@ -82,6 +85,7 @@ eslint-plugin-react-x
 eslint-plugin-react-dom
 
 Puis les activer dans eslint.config.js :
+
 ```js
 import reactX from 'eslint-plugin-react-x'
 import reactDom from 'eslint-plugin-react-dom'
@@ -104,7 +108,7 @@ export default defineConfig([
 ])
 ```
 
-########📂 Structure du projet
+######## 📂 Structure du projet
 vite-project/
 ├── public/              # Fichiers statiques
 ├── src/                 # Code source
@@ -115,7 +119,7 @@ vite-project/
 ├── vite.config.ts       # Config Vite
 └── package.json
 
-#########🚀 Objectifs d’apprentissage
+######### 🚀 Objectifs d’apprentissage
 
 Comprendre la structure d’un projet React + TypeScript + Vite
 
