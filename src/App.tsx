@@ -54,15 +54,26 @@ function App() {
       const shoot = () => {
         alert("Great Shot!");
       }
-      const shooter = (a) => {
-        alert(a);
+      const shooter = (a, b) => {
+        alert(b.type);
       }
-
+      const voiture = [
+        {id: 1, name: "Ford"},
+        {id: 2, name: "BMW"},
+        {id: 3, name: "Audi"}
+      ];
+const bus = ['Volvo', 'BMW', 'Ford', 'Mazda'];
   return (
     <> 
+    <ul>
+      {bus.map((buss, index) => <li key={index}>{buss}</li> )}
+    </ul>
+    <ul>
+      {voiture.map((v) => <li key={v.id}>I am a {v.name}!</li> )}
+    </ul>
      <button onClick={shoot}>Take the shot!</button>
-     <button onClick={() => shooter("Goal!")}>Take the shot!</button>
       <Garage />
+     <button onClick={(event) => shooter("Goal!", event)}>Take the shot!</button>
       <Car  brand = "BMW"/>
       <h1 className={x}>{x}Hello World *-</h1>
       <p style={mystules}> It has {x} horsepower</p>
