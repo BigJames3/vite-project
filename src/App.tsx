@@ -1,4 +1,5 @@
 import React from 'react';
+import { useState } from 'react';
 import { createRoot } from 'react-dom/client'
 
 function kwtop(kw) {
@@ -63,12 +64,74 @@ function App() {
         {id: 3, name: "Audi"}
       ];
 const bus = ['Volvo', 'BMW', 'Ford', 'Mazda'];
+const [name, setName] = useState("James");
+const [age, setAge] = useState("");
+
+function handleSubmit(e) {
+  e.preventDefault();
+  alert(`Your name is ${name} and you are ${age} years old`);
+}
+
+const [message, setMessage] = useState("Votre messsage ici!");
+const [voitures, setVoitures] = useState("Volvo");
+const [inputs; setInputs] = useState({});
+
+const handleChange = (event) => {
+  const name = event.target.name;
+  const value = event.target.value;
+  setInputs(values => ({...values, [name]: value}))
+}
   return (
     <> 
-    <form action="">
-      <label htmlFor=""> Enter your name : 
-        <input type="text" />
+    <form action="" onSubmit={handleSubmit}>
+      <label htmlFor=""> First Name:
+        <input type="text" name="firstname" 
+        value={inputs.firstname}
+        onChange={handleChange}
+        />
       </label>
+      <label htmlFor="">Last Name:
+        <input type="text"
+          name='lastname'
+          value={inputs.lastname}
+          onChange={handleChange} 
+        />
+      </label>
+
+      Deuxieme formulaire <br />
+      <label htmlFor=""> Voiture:
+        <select name="" id=""
+          value={voitures}
+          onChange={(e) => setVoitures(e.target.value)}>
+          <option value="Volvo">Volvo</option>
+          <option value="Saab">Saab</option>
+          <option value="Mercedes">Mercedes</option>
+          <option value="Audi">Audi</option>
+        </select>
+      </label> <br />      
+      <label htmlFor=""> Enter your name : 
+        <input type="text"
+          value={age} 
+          onChange={(e) => setAge(e.target.value)}
+          />
+      </label> <br />
+      <label htmlFor=""> Enter your name : 
+        <input type="text"
+               value={name}
+               onChange={(e) => setName(e.target.value)}
+               />
+      </label> <br />
+      <label htmlFor=""> Votre message de suggestion
+        <textarea name="" id="" cols="10" rows="5"
+          value={message}
+          onChange={(e) => setMessage(e.target.value)}
+        ></textarea>
+      </label>
+      <p>Current voiture: {voitures}</p>
+      <p>Current age: {age}</p>
+      <p>Current value: {name}</p>
+      <p>Current message: {message}</p>
+      <input type="submit" />
     </form>
     <ul>
       {bus.map((buss, index) => <li key={index}>{buss}</li> )}
@@ -80,7 +143,7 @@ const bus = ['Volvo', 'BMW', 'Ford', 'Mazda'];
       <Garage />
      <button onClick={(event) => shooter("Goal!", event)}>Take the shot!</button>
       <Car  brand = "BMW"/>
-      <h1 className={x}>{x}Hello World *-</h1>
+      <h1 className={x}>{x}Hello World *</h1>
       <p style={mystules}> It has {x} horsepower</p>
       <p className="myclass">{y} -- </p>
       <p className="myclass">{(val) < 41 ? (xt) : "Apple"}</p>
@@ -89,6 +152,7 @@ const bus = ['Volvo', 'BMW', 'Ford', 'Mazda'];
       <p> It has {hp} horsepower</p>
       <p> It has {kwtop(2)} horsepower</p>
       <h1>my name is {myobj.name} {myobj.model} and I {myobj.year} Year</h1>
+      <p> It has {Math.random()*10} horsepower</p>
     </>
   );
 }
