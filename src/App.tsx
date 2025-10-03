@@ -1,12 +1,12 @@
 import React from 'react';
 import { useState } from 'react';
-import { createRoot } from 'react-dom/client'
 
-function kwtop(kw) {
+
+function kwtop(kw: number): number {
   return kw * 1.34102;
 }
 
-function Car(props) {
+function Car(props: string | number) {
   return (
     <h2>I am a Car {props.brand}!</h2>
   );
@@ -74,12 +74,25 @@ function handleSubmit(e) {
 
 const [message, setMessage] = useState("Votre messsage ici!");
 const [voitures, setVoitures] = useState("Volvo");
-const [inputs; setInputs] = useState({});
 
+const [inputs, setInputs] = useState({});
 const handleChange = (event) => {
-  const name = event.target.name;
-  const value = event.target.value;
+  const target = event.target;
+  const value = target.type === 'checkbox' ? target.checked : target.value;
+  const name = target.name;
   setInputs(values => ({...values, [name]: value}))
+}
+
+const handleSubmit2 = (event) => {
+  let fillings = '';
+  if (inputs.tomato) fillings += "tomato ";
+  if (inputs.onion) {
+    if (inputs.tomato) fillings += "and";
+    fillings += "onion ";
+  }
+  if(fillings == '') fillings = "no ffillings";
+  alert('${inputs.firstname} ${inputs.lastname} with ${fillings}');
+  event.preventDefault();
 }
   return (
     <> 
@@ -87,7 +100,7 @@ const handleChange = (event) => {
       <label htmlFor=""> First Name:
         <input type="text" name="firstname" 
         value={inputs.firstname}
-        onChange={handleChange}
+        onChange={handleChange2}
         />
       </label>
       <label htmlFor="">Last Name:
@@ -95,6 +108,20 @@ const handleChange = (event) => {
           name='lastname'
           value={inputs.lastname}
           onChange={handleChange} 
+        />
+      </label>
+      <label htmlFor="">I want a burger with:
+        <input type="ckeckbox" 
+        name='tomato'
+        checked={inputs.tomato || false}
+        onChange={handleChange2}
+        />Tomato        
+      </label>
+      <label htmlFor="">
+        <input type="checkbox"
+          name='onion'
+          checked={inputs.onion || false}
+          onChange={handleChange2}
         />
       </label>
 
@@ -127,6 +154,7 @@ const handleChange = (event) => {
           onChange={(e) => setMessage(e.target.value)}
         ></textarea>
       </label>
+      <p>Current values: {inputs.firstname} {inputs.lastname}</p>
       <p>Current voiture: {voitures}</p>
       <p>Current age: {age}</p>
       <p>Current value: {name}</p>
